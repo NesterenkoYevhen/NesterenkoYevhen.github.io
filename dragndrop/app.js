@@ -171,6 +171,6 @@ function createThumbnail(file) {
 function createArrow() {
   return `<div class="arrow-block d-block margin-auto-x">
     <div class="arrow arrow-block__img margin-auto-x"></div>
-    <p class="arrow-block__desq">You can drag and drop files here to add them (you can also click to load) <p>                       
+    <p class="arrow-block__desq">You can drag and drop files here to add them<p>                       
   </div>`;
 }
