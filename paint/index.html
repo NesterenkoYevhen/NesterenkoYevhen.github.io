@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Canvas</title>
+  </head>
+  <body>
+    
+    <header id="header">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="main-title">Paint</h1>
+        <h1 class="main-title">ⓒ Nesterenko Yevhen</h1>
+        
+      </div>
+    </header>
+    <section id="main">
+      <div class="container container--upgrade">
+        <div class="paint-block__margin row justify-content-around flex-wrap align-items-center">
+          <div class="col col-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex flex-column align-items-center">
+            <h5 class="paint-block__title">change color</h5>
+            <input class="paint-block__input-color" type="color" />
+          </div>
+          <div class="paint-block__margin col col-3 col-xl-4 col-lg-5 col-md-6 col-sm-6 d-flex justify-content-between">
+            <div
+              class="
+                paint-block__instruments
+                d-flex
+                flex-column
+                align-items-center
+              "
+            >
+              <h5 class="paint-block__title">instruments</h5>
+              <select class="paint-block__select-instruments">
+                <option>Pencil</option>
+                <option>Eraser</option>
+                <option>Straight line</option>
+                <option>Circle</option>
+                <option>Rectangle</option>
+                <option>Right triangle</option>
+                <option>Star</option>
+                <option>Cloud</option>
+              </select>
+            </div>
+            <div
+              class="
+                paint-block__instruments
+                d-flex
+                flex-column
+                align-items-center
+              "
+            >
+              <h5 class="paint-block__title">fill</h5>
+              <div class="paint-block__fill-inputs">
+                <div class="paint-block__fill-input">
+                  <input
+                    id="solid"
+                    type="radio"
+                    name="fill"
+                    value="solid"
+                    checked
+                  />
+                  <label for="solid">Solid</label>
+                </div>
+                <div class="paint-block__fill-input">
+                  <input
+                    id="circuit"
+                    type="radio"
+                    name="fill"
+                    value="circuit"
+                  />
+                  <label for="circuit">Circuit</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="paint-block__margin col col-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex flex-column align-items-center">
+            <h5 class="paint-block__title">thickness</h5>
+            <select class="paint-block__select-thickness">
+              <option>1px</option>
+              <option>2px</option>
+              <option>5px</option>
+              <option>10px</option>
+              <option>25px</option>
+            </select>
+          </div>
+          <div class="paint-block__margin col col-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex flex-column align-items-center col-md-2">
+            <button class="btn btn-clear">clear</button>
+            <button class="btn btn-save">save</button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col col-10">
+            <canvas id="main-canvas" class="main-canvas">Sorry, but your browser does not support &lt;canvas&gt;, or you have Java Script disabled</canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
