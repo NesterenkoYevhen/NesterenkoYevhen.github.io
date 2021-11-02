@@ -562,6 +562,7 @@ function drawRectangle() {
   }
   if (isMouseDown && myInstrument == "Rectangle") {
     ctx.beginPath();
+    ctx.lineWidth = myThickness;
     ctx.rect(
       startX,
       startY,
@@ -646,6 +647,7 @@ function drawRightTriangle() {
   }
   if (isMouseDown && myInstrument == "Right triangle") {
     ctx.beginPath();
+    ctx.lineWidth = myThickness;
     ctx.moveTo(startX, mouseY);
     ctx.lineTo(startX, Math.abs(mouseY - startY));
     ctx.lineTo(mouseX, mouseY);
