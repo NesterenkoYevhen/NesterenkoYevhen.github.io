@@ -654,13 +654,14 @@ function drawRightTriangle() {
     if (myFill == "solid") {
       ctx.strokeStyle = myColor;
       ctx.stroke();
+      drawHelpCircle(startX, Math.abs(mouseY - startY), myThickness, myColor);
+      drawHelpCircle(mouseX, mouseY, myThickness, myColor);
+      drawHelpCircle(startX, mouseY, myThickness, myColor);
     } else {
       ctx.fillStyle = myColor;
       ctx.fill();
     }
-    drawHelpCircle(startX, Math.abs(mouseY - startY), myThickness, myColor);
-    drawHelpCircle(mouseX, mouseY, myThickness, myColor);
-    drawHelpCircle(startX, mouseY, myThickness, myColor);
+    
   }
 }
 
