@@ -63,6 +63,11 @@ function onTaskListClickHandler({ target }) {
         .closest(".submited-tasks__element")
         .getAttribute("data-item-id")}`
     ];
+    localStorage.removeItem(
+      `${target
+        .closest(".submited-tasks__element")
+        .getAttribute("data-item-id")}`
+    );
     return;
   }
   if (target.classList.contains("submited-tasks__pause")) {
@@ -350,7 +355,7 @@ window.onstorage = (event) => {
         switch (myTask["myEvent"]) {
           case "delete":
             document.querySelector(`li[data-item-id="${event.key}"]`).remove();
-            localStorage.removeItem(event.key);
+            //localStorage.removeItem(event.key);
             break;
           case "pause":
             //clear interval
