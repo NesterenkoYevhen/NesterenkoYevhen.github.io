@@ -18,6 +18,7 @@ inputTask.addEventListener("input", onInputTaskHandler);
 function onInputTaskHandler({ target: { value } }) {
   localStorage.setItem("currentInput", value);
 }
+
 function onBtnAddTaskClickHandler(e) {
   let startDate = new Date();
   let newTask;
@@ -57,6 +58,11 @@ function onTaskListClickHandler({ target }) {
         ]
       )
     );
+    delete clockTimerObj[
+      `${target
+        .closest(".submited-tasks__element")
+        .getAttribute("data-item-id")}`
+    ];
     return;
   }
   if (target.classList.contains("submited-tasks__pause")) {
@@ -254,6 +260,10 @@ function timer(element) {
     t -= m;
     t = Math.floor(t / 60);
     h = t % 60;
+    if (h > 99 && m > 59 && s > 59) {
+      element.querySelector(".submited-tasks__time").textContent = "99:59:59";
+      return;
+    }
     if (h < 10) h = "0" + h;
     if (m < 10) m = "0" + m;
     if (s < 10) s = "0" + s;
@@ -273,12 +283,15 @@ function timer(element) {
     t -= m;
     t = Math.floor(t / 60);
     h = t % 60;
+    if (h > 99 && m > 59 && s > 59) {
+      element.querySelector(".submited-tasks__time").textContent = "99:59:59";
+      return;
+    }
     if (h < 10) h = "0" + h;
     if (m < 10) m = "0" + m;
     if (s < 10) s = "0" + s;
     element.querySelector(".submited-tasks__time").textContent =
       h + ":" + m + ":" + s;
-    //element.setAttribute("data-pause-time", "00:00:00")
   }
 }
 
