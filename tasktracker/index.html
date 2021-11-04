@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Task tracker</title>
+</head>
+<body>
+  <header id="header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="main-title">Task tracker</h1>
+      <h1 class="main-title">ⓒ Nesterenko Yevhen</h1>
+      
+    </div>
+  </header>
+  <section id="main">
+    <div class="container container--border container--padding">
+      <h1 class="text-center">Tracker</h1>
+      <div class="row justify-content-center">
+        <div class="col col-5 task-area d-flex justify-content-between align-items-center">
+          <input type="text" class="task-area__input" placeholder="Enter tracker name">
+          <i class="fas fa-play-circle task-area__add"></i>
+        </div>
+        <div class="col col-8 submited-tasks">
+          <ul class="submited-tasks__list">          
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="app.js"></script>
+</body>
+</html>
